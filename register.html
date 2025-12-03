@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Eternize</title>
+    <title>Criar Conta - Eternize</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,31 +16,45 @@
             <div class="login-card">
                 <div class="login-header">
                     <div class="logo-large">✨</div>
-                    <h1>Eternize</h1>
-                    <p>Entre na sua conta</p>
+                    <h1>Criar Conta</h1>
+                    <p>Comece a eternizar seus momentos</p>
                 </div>
 
-                <form id="loginForm" class="login-form">
+                <form id="registerForm" class="login-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required placeholder="Seu nome">
+                    </div>
+
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(31) 99999-9999">
                     </div>
 
                     <div class="form-group">
                         <label for="password">Senha</label>
-                        <input type="password" id="password" required>
+                        <input type="password" id="password" required placeholder="Mínimo 6 caracteres">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Senha</label>
+                        <input type="password" id="confirmPassword" required placeholder="Digite a senha novamente">
                     </div>
 
                     <div class="form-options">
                         <label class="checkbox-label">
-                            <input type="checkbox" id="remember">
-                            <span>Lembrar de mim</span>
+                            <input type="checkbox" id="terms" required>
+                            <span>Aceito os <a href="#" class="link-secondary">termos de uso</a></span>
                         </label>
-                        <a href="#" class="link-secondary">Esqueceu a senha?</a>
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-block">
-                        Entrar
+                        Criar Conta
                     </button>
                 </form>
 
@@ -49,33 +63,33 @@
                 </div>
 
                 <div class="login-options">
-                    <p>Ainda não tem conta? <a href="register.html" class="link-secondary">Criar conta</a></p>
+                    <p>Já tem uma conta? <a href="login.html" class="link-secondary">Fazer login</a></p>
                     <p style="margin-top: 15px;">Ou <a href="create.html" class="link-secondary">✨ Usar sem cadastro</a></p>
                 </div>
             </div>
 
             <div class="login-features">
-                <h3>Por que usar o Eternize?</h3>
+                <h3>Benefícios de criar conta</h3>
                 <div class="feature-list">
                     <div class="feature-item">
-                        <span class="feature-icon">📸</span>
+                        <span class="feature-icon">💾</span>
                         <div>
-                            <strong>Fotos Ilimitadas</strong>
-                            <p>Receba quantas fotos quiser dos seus convidados</p>
+                            <strong>Salvar Eventos</strong>
+                            <p>Mantenha todos os seus eventos organizados</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">🔒</span>
+                        <span class="feature-icon">📊</span>
                         <div>
-                            <strong>100% Seguro</strong>
-                            <p>Suas memórias protegidas com criptografia</p>
+                            <strong>Dashboard Completo</strong>
+                            <p>Gerencie todos os seus álbuns em um só lugar</p>
                         </div>
                     </div>
                     <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
+                        <span class="feature-icon">🎯</span>
                         <div>
-                            <strong>Tempo Real</strong>
-                            <p>Veja as fotos chegando durante o evento</p>
+                            <strong>Recursos Premium</strong>
+                            <p>Acesso a funcionalidades exclusivas</p>
                         </div>
                     </div>
                 </div>
@@ -83,6 +97,6 @@
         </div>
     </div>
 
-    <script src="js/login.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>

@@ -1,11 +1,16 @@
-// ===== INDEXEDDB STORAGE MANAGER =====
-// Sistema de armazenamento robusto para fotos e dados de páginas
+// ===== STORAGE MANAGER =====
+// Sistema híbrido: IndexedDB local + API backend com S3
+
+const API_URL = window.location.hostname === 'localhost' 
+    ? 'http://localhost:3000/api' 
+    : '/api'; // Em produção, usa proxy ou mesmo domínio
 
 class StorageManager {
     constructor() {
         this.dbName = 'EternizeDB';
         this.version = 1;
         this.db = null;
+        this.useBackend = true; // Usar backend com S3
     }
 
     // Inicializar banco de dados
